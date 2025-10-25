@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitor OLX - Xbox 360 RN</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎮 Monitor OLX - Xbox 360</h1>
+      <p class="subtitle">Monitorando anúncios em Rio Grande do Norte</p>
+    </header>
+
+    <div class="status-card">
+      <div class="status-header">
+        <h2>Status do Monitor</h2>
+        <span class="status-badge" id="statusBadge">🟢 Ativo</span>
+      </div>
+      
+      <div class="stats-grid">
+        <div class="stat">
+          <div class="stat-label">Última verificação</div>
+          <div class="stat-value" id="lastCheck">Aguardando...</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Total de verificações</div>
+          <div class="stat-value" id="totalChecks">0</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Anúncios encontrados hoje</div>
+          <div class="stat-value" id="foundCount">0</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Intervalo</div>
+          <div class="stat-value" id="interval">30s</div>
+        </div>
+      </div>
+
+      <button class="check-btn" id="checkNowBtn">
+        <span>🔍 Verificar Agora</span>
+      </button>
+    </div>
+
+    <div class="listings-section">
+      <h2>Anúncios Encontrados Hoje</h2>
+      <div id="listingsContainer">
+        <div class="empty-state">
+          <p>🔎 Procurando por novos anúncios...</p>
+          <p class="empty-state-hint">Os anúncios aparecerão aqui quando forem encontrados</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notification-permission" id="notificationPermission">
+    <p>🔔 Permitir notificações para ser alertado sobre novos anúncios?</p>
+    <button id="enableNotifications">Permitir</button>
+    <button id="dismissNotifications">Agora não</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
